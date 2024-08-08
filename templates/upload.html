@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polyline Processor</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+        .download-buttons {
+            margin-top: 20px;
+        }
+        .output-images img {
+            max-width: 100%;
+            height: auto;
+        }
+        .output-images {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Polyline Processor</h1>
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Choose CSV or SVG file to upload:</label>
+                <input type="file" class="form-control-file" id="file" name="file" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+
+        {% if svg_file and plot_svg_file and plot_png_file %}
+        <div class="output-images">
+            <h2>Output</h2>
+            <h3>SVG Plot:</h3>
+            <img src="{{ plot_svg_file }}" alt="SVG Plot">
+            <h3>PNG Plot:</h3>
+            <img src="{{ plot_png_file }}" alt="PNG Plot">
+        </div>
+        <div class="download-buttons">
+            <a href="{{ svg_file }}" class="btn btn-success" download>Download Processed SVG</a>
+            <a href="{{ plot_svg_file }}" class="btn btn-success" download>Download SVG Plot</a>
+            <a href="{{ plot_png_file }}" class="btn btn-success" download>Download PNG Plot</a>
+        </div>
+        {% endif %}
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

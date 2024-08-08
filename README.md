@@ -17,7 +17,7 @@ Welcome to **Curvetopia-Adobe**, a project dedicated to bringing order and beaut
 - [Contributors](#contributors)
 
 ## Objective
-The mission of Curvetopia-Adobe is to develop a comprehensive process for identifying, regularizing, and beautifying curves, starting with simple shapes and progressing to more complex forms. The project is designed to work with curves represented by cubic Bézier curves and polylines, with outputs visualized in SVG format.
+The mission of Curvetopia-Adobe is to develop a comprehensive process for identifying,regularizing, and beautifying curves, starting with simple shapes and progressing to more complex forms. The project is designed to work with curves represented by cubic Bézier curves and polylines, with outputs visualized in SVG format.
 
 ## Features
 
